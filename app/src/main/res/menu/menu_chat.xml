@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/addChatUser"
+        android:icon="@drawable/ic_pmi"
+        android:title="User" />
+    <item
+        android:id="@+id/addChatPmi"
+        android:icon="@drawable/ic_attach_file_black_24dp"
+        android:title="Pmi" />
+</menu>

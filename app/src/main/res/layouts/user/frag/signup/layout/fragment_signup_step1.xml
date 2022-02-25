@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:padding="@dimen/layout_padding">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/input_margin"
+        android:text="Isikan Data Diri Anda"
+        android:textColor="@color/navyBlue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/signUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginBottom="@dimen/input_margin"
+            android:background="@drawable/theme_edittext_solid_corner"
+            android:drawableStart="@drawable/ic_email_black_24dp"
+            android:drawablePadding="@dimen/input_padding"
+            android:ems="10"
+            android:hint="Masukkan email anda"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/signUpNama"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginBottom="@dimen/input_margin"
+            android:background="@drawable/theme_edittext_solid_corner"
+            android:drawableStart="@drawable/ic_single_person"
+            android:drawablePadding="@dimen/input_padding"
+            android:ems="10"
+            android:hint="Masukkan nama anda..."
+            android:inputType="textPersonName"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/signUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginBottom="@dimen/input_margin"
+            android:background="@drawable/theme_edittext_solid_corner"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:drawablePadding="@dimen/input_padding"
+            android:ems="10"
+            android:hint="@string/form_password"
+            android:inputType="textPersonName"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/signUpRepassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:background="@drawable/theme_edittext_solid_corner"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:drawablePadding="@dimen/input_padding"
+            android:ems="10"
+            android:hint="Masukkan ulang password anda..."
+            android:inputType="textPersonName"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/nextToGolDarah"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/input_height"
+        android:background="@drawable/theme_button_solid_radius"
+        android:drawableRight="@drawable/ic_arrow_forward_white"
+        android:paddingStart="45dp"
+        android:paddingEnd="20dp"
+        android:text="@string/form_nextbutton"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/svg_logo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

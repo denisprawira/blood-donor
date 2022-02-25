@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+        android:id="@+id/floating_event_donor_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_rect_white"
+        android:elevation="0dp"
+        android:paddingStart="16dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="5dp"
+        app:bnc_mode="spread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_item_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_event_icon"
+            app:bt_padding="12dp"
+            app:bt_shape="@drawable/transition_background_drawable_default"
+            app:bt_title="Event" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/c_item_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/colorPrimary"
+            app:bt_colorInactive="@color/colorAccent"
+            app:bt_icon="@drawable/ic_find_donor"
+            app:bt_padding="12dp"
+            app:bt_shape="@drawable/transition_background_drawable_default"
+            app:bt_title="Relawan" />
+
+
+    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/eventDonorRequestContainer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@+id/floating_event_donor_"-->
+    <!--android:layout_marginTop="1dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:elevation="5dp" />-->
+
+    <FrameLayout
+        android:id="@+id/eventDonorContainerFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+</LinearLayout>

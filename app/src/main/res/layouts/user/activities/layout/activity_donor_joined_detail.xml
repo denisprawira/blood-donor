@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".User.UI.DonorJoinedDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/backDonorJoinedDetail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/theme_button_transparent"
+                app:srcCompat="@drawable/ic_arrow_back_pink_24dp" />
+
+            <TextView
+                android:id="@+id/chatName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="85dp"
+                android:gravity="center"
+                android:text="Detail Permintaan Donor"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/donorJoinedDetailProfileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="8dp"
+            android:elevation="5dp"
+            android:src="@drawable/empty_person"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/theme_edittext_stroke_radius" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="70dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/donorJoinedDetailUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:gravity="center"
+                    android:text="TextView"
+                    android:textSize="21dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/donorJoinedDetailMessage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/theme_background_icon_grey"
+                        app:srcCompat="@drawable/ic_email" />
+
+                    <ImageButton
+                        android:id="@+id/donorJoinedDetailCall"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/theme_background_icon_grey"
+                        app:srcCompat="@drawable/ic_local_phone" />
+
+                    <ImageButton
+                        android:id="@+id/donorJoinedDetailChat"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/theme_background_icon_grey"
+                        app:srcCompat="@drawable/ic_email" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/donorJoinedDetailTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="40dp"
+                    android:drawableStart="@drawable/ic_time_grey"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/source_sans_pro_bold"
+                    android:gravity="center_vertical"
+                    android:text="TextView"
+                    android:textColor="#afafaf"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/donorJoinedDetailBlood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableStart="@drawable/ic_blood_drop_grey"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/source_sans_pro_bold"
+                    android:minWidth="50dp"
+                    android:paddingEnd="5dp"
+                    android:text="TextView"
+                    android:textColor="#afafaf"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/donorJoinedDetailUtdName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableStart="@drawable/ic_building_grey"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/source_sans_pro_bold"
+                    android:minWidth="50dp"
+                    android:paddingEnd="5dp"
+                    android:text="TextView"
+                    android:textColor="#afafaf"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/donorJoinedDetailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableStart="@drawable/ic_location_grey"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/source_sans_pro_bold"
+                    android:text="TextView"
+                    android:textColor="#afafaf"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/donorJoinedDetailDirection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/theme_button_solid_corner"
+            android:text="Direction"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

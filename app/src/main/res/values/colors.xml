@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="colorPrimary">#ed7478</color>FF5F7F
+<color name="colorPrimaryDark">#b32a2a</color>F5718A
+<color name="colorAccent">#f99297</color>
+<color name="colorAccentAlpha">#fee7e8</color>
+<color name="colorAccent2">#f9c1c6</color>
+<color name="primaryColor">#ff5a57</color>
+<color name="primaryColorBest">#f6786c</color>
+
+<color name="colorRed1">#FF5F7F</color>
+<!--color name="colorRed1">#ed1b24</color-->
+<color name="colorRed2">#F5718A</color>
+<color name="colorRed3">#F894A7</color>
+<color name="colorRed4">#FAB8C5</color>
+<color name="colorRed5">#FDDBE2</color>
+
+<color name="colorBlue1">#424C6E</color>
+<color name="colorBlue2">#68708B</color>
+<color name="colorBlue3">#8E94A8</color>
+<color name="colorBlue4">#B3B7C5</color>
+<color name="colorBlue5">#D9DBE2</color>
+
+
+<color name="primarycolorDark">#2b2b2b</color>
+<color name="black_overlay">#4D000000</color>
+<color name="navyBlue">#424C6E</color>
+
+<color name="textColorPrimary">#212121</color>
+<color name="textColorSecondary">#757575</color>
+<color name="white">#ffffff</color>
+<color name="grey_bg_light">#fafafa</color>
+<color name="grey_light2">#F5F2F2</color>
+<color name="grey_light">#e2e2e2</color>
+</resources>
