@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backEventDocument"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_arrow_back_pink_24dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="@dimen/input_margin"
+            android:layout_marginEnd="@dimen/input_margin"
+            android:layout_marginBottom="@dimen/input_margin"
+            android:gravity="center_vertical"
+            android:text="Permintaan Acara Donor Darah"
+            android:textColor="@color/colorBlue1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/layout_padding">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginBottom="@dimen/input_margin"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                app:srcCompat="@drawable/ic_event_add"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="114dp" />
+
+            <EditText
+                android:id="@+id/eventAddPmi"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginBottom="@dimen/input_margin"
+                android:background="@drawable/theme_edittext_solid_corner"
+                android:clickable="true"
+                android:drawablePadding="20dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="Pilih Pmi yang dituju"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="200dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/eventAddDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="@dimen/input_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_edittext_solid_corner"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:foregroundGravity="bottom"
+                    android:gravity="center_vertical"
+                    android:hint="Pilih Tanggal"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="272dp" />
+
+                <EditText
+                    android:id="@+id/eventAddTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="@dimen/input_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/theme_edittext_solid_corner"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:foregroundGravity="bottom"
+                    android:gravity="center_vertical"
+                    android:hint="Pilih Waktu"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    tools:layout_editor_absoluteX="30dp"
+                    tools:layout_editor_absoluteY="272dp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/eventAddFile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginBottom="@dimen/input_margin"
+                android:background="@drawable/theme_edittext_solid_corner"
+                android:clickable="true"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:foregroundGravity="bottom"
+                android:gravity="center_vertical"
+                android:hint="Lampiran (Opsional)"
+                android:inputType="number"
+                android:padding="10dp"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="344dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/eventAddLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/theme_edittext_solid_corner"
+                    android:clickable="true"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:foregroundGravity="bottom"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/eventAddLocationContainerIcon"
+                    android:layout_width="117dp"
+                    android:layout_height="118dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/eventAddLocation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:srcCompat="@drawable/ic_location_color" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pilih Lokasi" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/eventAddSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/input_height"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/theme_button_solid_radius"
+            android:text="Kirim Permintaan"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundGrey"
+    android:orientation="vertical"
+    tools:context=".UIPMI.RequestedDetailEventActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linearLayout333"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/requestedEventPmiBack"
+                    app:srcCompat="@drawable/ic_arrow_back_pink_24dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/theme_background_icon_grey"
+                    android:src="@drawable/ic_arrow_back_pink_24dp" />
+
+                <TextView
+                    android:id="@+id/textViewPmi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Detail Acara"
+                    android:textColor="@color/colorBlue1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/requestedEventPmiEdit"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/theme_background_icon_grey"
+                    app:srcCompat="@drawable/ic_mode_edit" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="@dimen/input_margin">
+
+                <fragment
+                    android:id="@+id/requestedDetailEventPmiMap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/input_margin"
+                android:layout_marginEnd="@dimen/input_margin"
+                android:layout_marginBottom="10dp"
+                android:text="Profil Pengguna"
+                android:textColor="@color/colorBlue1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/input_margin"
+                android:layout_marginEnd="@dimen/input_margin"
+                android:layout_marginBottom="@dimen/input_margin"
+                app:cardCornerRadius="@dimen/input_border_radius"
+                app:cardElevation="@dimen/card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/eventDetailProfileImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:contentDescription="@string/nav_header_desc"
+                            android:src="@drawable/empty_person" />
+
+                        <TextView
+                            android:id="@+id/requestedEventPmiUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="20dp"
+                            android:layout_weight="1"
+                            android:text="TextView"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="7dp"
+                            android:background="@drawable/devider_full" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/eventDetailChat"
+                                app:srcCompat="@drawable/ic_baseline_chat_24"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/theme_background_icon_grey"
+                                android:src="@drawable/ic_bottom_chat" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/eventdetailCall"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/theme_background_icon_grey"
+                                app:srcCompat="@drawable/ic_local_phone" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/input_margin"
+                android:layout_marginEnd="@dimen/input_margin"
+                android:layout_marginBottom="10dp"
+                android:text="Detail Informasi Acara"
+                android:textColor="@color/colorBlue1"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/input_margin"
+                android:layout_marginEnd="@dimen/input_margin"
+                app:cardCornerRadius="@dimen/input_border_radius"
+                app:cardElevation="@dimen/card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/requestedEventPmiText1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/theme_status_background_unapproved"
+                            android:gravity="center"
+                            android:minWidth="90dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="3dp"
+                            android:text="Judul"
+                            android:textColor="@color/colorRed1" />
+
+                        <TextView
+                            android:id="@+id/requestedEventPmiTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="25dp"
+                            android:inputType="textMultiLine"
+                            android:text="TextView"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/requestedEventPmiText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/theme_status_background_unapproved"
+                            android:gravity="center"
+                            android:minWidth="90dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="3dp"
+                            android:text="Deskripsi"
+                            android:textColor="@color/colorRed1" />
+
+                        <TextView
+                            android:id="@+id/requestedEventPmiDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="25dp"
+                            android:inputType="textMultiLine"
+                            android:text="TextView"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/theme_status_background_unapproved"
+                            android:gravity="center"
+                            android:minWidth="90dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="3dp"
+                            android:text="Organisasi/Instansi"
+                            android:textColor="@color/colorRed1" />
+
+                        <TextView
+                            android:id="@+id/requestedEventPmiInstitution"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="25dp"
+                            android:inputType="textMultiLine"
+                            android:text="TextView"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/theme_status_background_unapproved"
+                            android:gravity="center"
+                            android:minWidth="90dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="3dp"
+                            android:text="Target Pendonor"
+                            android:textColor="@color/colorRed1" />
+
+                        <TextView
+                            android:id="@+id/requestedEventPmiTarget"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="25dp"
+                            android:inputType="textMultiLine"
+                            android:text="TextView"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/eventRequestedTextview11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/theme_status_background_unapproved"
+                            android:gravity="center"
+                            android:minWidth="90dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="3dp"
+                            android:text="Tanggal dan Waktu"
+                            android:textColor="@color/colorRed1" />
+
+                        <TextView
+                            android:id="@+id/requestedEventPmiDateTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="25dp"
+                            android:inputType="textMultiLine"
+                            android:text="TextView"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/eventRequestedTextview12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/theme_status_background_unapproved"
+                            android:gravity="center"
+                            android:minWidth="90dp"
+                            android:paddingStart="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="3dp"
+                            android:text="Alamat"
+                            android:textColor="@color/colorRed1" />
+
+                        <TextView
+                            android:id="@+id/requestedEventPmiAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:inputType="textMultiLine"
+                            android:text="TextView"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/eventDetailOpenMap2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/theme_button_solid_corner_transparent"
+                        android:text="Buka di Map"
+                        android:textColor="@color/colorRed1" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/requestedEventPmiConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:layout_margin="@dimen/input_margin"
+                android:layout_weight="1"
+                android:background="@drawable/theme_button_solid_radius"
+                android:text="Setujui Acara"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homePmi"
+        android:title="@string/bottom_menu_home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/chatPmi"
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="@string/bottom_menu_Donor" />
+    <item
+        android:id="@+id/notificationPmi"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/bottom_menu_chat" />
+    <item
+        android:id="@+id/settingsPmi"
+        android:title="@string/bottom_menu_settings"
+        android:icon="@drawable/ic_profile"/>
+</menu>
