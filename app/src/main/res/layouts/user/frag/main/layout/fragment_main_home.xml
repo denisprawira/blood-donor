@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_home_background"
-    tools:context=".User.UI.HomeActivity"><![CDATA[
+    tools:context=".UI.HomeActivity"><![CDATA[
 
     >
 
@@ -125,20 +125,20 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView"
+                            android:id="@+id/imageViewHomeFragmentWishList"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_gravity="center_vertical|center_horizontal|center"
                             app:srcCompat="@drawable/ic_wish_list" />
 
                         <TextView
-                            android:id="@+id/textView14"
-                            android:layout_width="match_parent"
+                            android:id="@+id/bankdarahtitle"
+                            android:layout_width="63dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="3dp"
                             android:layout_marginEnd="3dp"
                             android:gravity="center"
-                            android:text="Blood Bank"
+                            android:text="Bank Darah"
                             android:textColor="@color/navyBlue"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -172,13 +172,13 @@
 
                         <TextView
                             android:id="@+id/textView35"
-                            android:layout_width="match_parent"
+                            android:layout_width="69dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="3dp"
                             android:layout_marginEnd="3dp"
                             android:layout_marginBottom="15dp"
                             android:gravity="center"
-                            android:text="Activities"
+                            android:text="Acara Anda"
                             android:textColor="@color/navyBlue"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -222,12 +222,12 @@
 
                         <TextView
                             android:id="@+id/textView29"
-                            android:layout_width="match_parent"
+                            android:layout_width="97dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="3dp"
                             android:layout_marginEnd="3dp"
                             android:gravity="center"
-                            android:text="Request"
+                            android:text="Permintaan Anda"
                             android:textColor="@color/navyBlue"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -264,12 +264,12 @@
 
                         <TextView
                             android:id="@+id/textView14"
-                            android:layout_width="match_parent"
+                            android:layout_width="78dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="3dp"
                             android:layout_marginEnd="3dp"
                             android:gravity="center"
-                            android:text="Find Donor"
+                            android:text="Cari Pendonor"
                             android:textColor="@color/navyBlue"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -282,6 +282,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout10"
         android:layout_width="368dp"
         android:layout_height="128dp"
         android:layout_marginStart="8dp"

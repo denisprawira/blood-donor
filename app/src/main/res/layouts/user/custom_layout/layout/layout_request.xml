@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0EEEE"
+        android:elevation="0dp"
+        android:gravity="center"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:paddingStart="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.204">
+
+                <TextView
+                    android:id="@+id/eventRequestLabelDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="start|end"
+                    android:text="03 March ,2019"
+                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/eventRequestLabelDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="5dp"
+                    android:gravity="end"
+                    android:text="Friday"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="323dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center|end"
+                android:layout_marginTop="76dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/illustration_women_event" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                android:gravity="end"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingEnd="20dp">
+
+                    <ImageButton
+                        android:id="@+id/backRequestEventDonor"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right|end"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/theme_button_transparent"
+                        android:elevation="8dp"
+                        android:foregroundGravity="left"
+                        app:srcCompat="@drawable/ic_arrow_back_pink_24dp"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="20dp" />
+                </LinearLayout>
+
+
+            </androidx.appcompat.widget.Toolbar>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout12"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:background="@drawable/background_header_bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"></LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/linearLayout11"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/appbar">-->
+
+    <!--<com.gauravk.bubblenavigation.BubbleNavigationConstraintView-->
+    <!--android:id="@+id/floating_"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:layout_marginEnd="10dp"-->
+    <!--android:background="@drawables/rounded_rect_white"-->
+    <!--android:elevation="0dp"-->
+    <!--android:paddingStart="16dp"-->
+    <!--android:paddingTop="5dp"-->
+    <!--android:paddingEnd="16dp"-->
+    <!--android:paddingBottom="5dp"-->
+    <!--app:bnc_mode="spread">-->
+
+    <!--<com.gauravk.bubblenavigation.BubbleToggleView-->
+    <!--android:id="@+id/c_item_rest"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:bt_active="true"-->
+    <!--app:bt_colorActive="@color/colorPrimary"-->
+    <!--app:bt_colorInactive="@color/colorAccent"-->
+    <!--app:bt_icon="@drawables/ic_event_icon"-->
+    <!--app:bt_padding="12dp"-->
+    <!--app:bt_shape="@drawables/transition_background_drawable_default"-->
+    <!--app:bt_title="Event" />-->
+
+    <!--<com.gauravk.bubblenavigation.BubbleToggleView-->
+    <!--android:id="@+id/c_item_room"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:bt_colorActive="@color/colorPrimary"-->
+    <!--app:bt_colorInactive="@color/colorAccent"-->
+    <!--app:bt_icon="@drawables/ic_find_donor"-->
+    <!--app:bt_padding="12dp"-->
+    <!--app:bt_shape="@drawables/transition_background_drawable_default"-->
+    <!--app:bt_title="Relawan" />-->
+
+
+    <!--</com.gauravk.bubblenavigation.BubbleNavigationConstraintView>-->
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/eventContainer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:background="@drawables/background_gradient1"-->
+    <!--android:elevation="5dp"-->
+    <!--android:minHeight="100dp"-->
+    <!--app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
+
+    <!--</LinearLayout>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

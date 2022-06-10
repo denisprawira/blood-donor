@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User.UI.Event.EventRequestEditActivity">
+    tools:context=".UI.Event.EventRequestEditActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -213,7 +213,7 @@
                             android:textColor="@color/white" />
 
                         <EditText
-                            android:id="@+id/eventRequestEditDescription"
+                            android:id="@+id/eventAddPmi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="15dp"
@@ -254,7 +254,7 @@
 
 
                         <TextView
-                            android:id="@+id/textView21"
+                            android:id="@+id/fdfdfdfdfd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/theme_textview_solid_radius_coloraccent"
@@ -336,7 +336,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView21"
+                            android:id="@+id/gfj"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/theme_textview_solid_radius_coloraccent"
@@ -370,7 +370,7 @@
                             android:textSize="15dp" />
 
                         <TextView
-                            android:id="@+id/textView21"
+                            android:id="@+id/bgfg"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/theme_textview_solid_radius_coloraccent"
@@ -439,7 +439,7 @@
 
 
                         <TextView
-                            android:id="@+id/textView21"
+                            android:id="@+id/hj"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/theme_textview_solid_radius_coloraccent"
@@ -458,7 +458,7 @@
                             android:orientation="horizontal">
 
                             <EditText
-                                android:id="@+id/eventRequestEditDocument"
+                                android:id="@+id/eventEditDocument"
                                 android:layout_width="match_parent"
                                 android:layout_height="65dp"
                                 android:layout_gravity="center_vertical"
@@ -487,7 +487,7 @@
                                 android:layout_marginTop="15dp"
                                 android:layout_marginBottom="20dp"
                                 android:layout_weight="1"
-                                app:srcCompat="@drawable/places_ic_search" />
+                                app:srcCompat="@drawable/ic_activity" />
                         </LinearLayout>
 
 

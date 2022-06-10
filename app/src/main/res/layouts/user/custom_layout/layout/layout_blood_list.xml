@@ -30,7 +30,6 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
-                    android:background="@drawable/theme_button_solid_radius"
                     android:gravity="center"
                     android:text="AB+"
                     android:textColor="@color/white"
@@ -66,7 +65,6 @@
                 android:layout_width="74dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/background_gradient1"
                 android:gravity="center"
                 android:orientation="vertical">
 

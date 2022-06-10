@@ -8,8 +8,9 @@
 <color name="primaryColor">#ff5a57</color>
 <color name="primaryColorBest">#f6786c</color>
 
+
+<color name="backgroundGrey">#F6F6FA</color>
 <color name="colorRed1">#FF5F7F</color>
-<!--color name="colorRed1">#ed1b24</color-->
 <color name="colorRed2">#F5718A</color>
 <color name="colorRed3">#F894A7</color>
 <color name="colorRed4">#FAB8C5</color>
@@ -21,6 +22,10 @@
 <color name="colorBlue4">#B3B7C5</color>
 <color name="colorBlue5">#D9DBE2</color>
 
+<!-- event flag status -->
+<color name="colorStatusApproved">#40ad00</color>
+<color name="colorStatusPending">#EA8B00</color>
+<color name="colorStatusDisapproved">#F44336</color>
 
 <color name="primarycolorDark">#2b2b2b</color>
 <color name="black_overlay">#4D000000</color>
@@ -30,6 +35,6 @@
 <color name="textColorSecondary">#757575</color>
 <color name="white">#ffffff</color>
 <color name="grey_bg_light">#fafafa</color>
-<color name="grey_light2">#F5F2F2</color>
+<color name="grey_light2">#EFEFEF</color>
 <color name="grey_light">#e2e2e2</color>
 </resources>

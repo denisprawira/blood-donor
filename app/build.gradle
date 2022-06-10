@@ -1,12 +1,19 @@
-apply plugin: 'com.android.application'
-apply plugin: 'com.google.gms.google-services'
-
+//apply plugin: 'com.android.application'
+//apply plugin: 'com.google.gms.google-services'
+//apply plugin: 'org.jetbrains.kotlin.android'
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
 android {
-    compileSdkVersion 28
+    compileSdkVersion 31
     defaultConfig {
         applicationId "com.example.denisprawira.ta"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -34,39 +41,51 @@ android {
             ]
         }
     }
+
+    viewBinding{
+        enabled =true
+    }
 }
 
 dependencies {
+    implementation 'androidx.work:work-runtime:2.7.1'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
 
     //design library
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
+//    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+//    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
 
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.fragment:fragment-ktx:1.4.1'
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
+    implementation "com.google.android.material:material:1.5.0"
+    implementation "androidx.activity:activity-ktx:1.4.0"
+    implementation "io.coil-kt:coil:1.4.0"
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.activity:activity:1.4.0'
+    implementation 'com.google.firebase:firebase-messaging:23.0.3'
+    implementation 'com.google.firebase:firebase-firestore:24.1.1'
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
 
 
     //play services
-    implementation 'com.google.android.gms:play-services-places:17.0.0'
-    implementation 'com.google.android.gms:play-services-maps:18.0.2'
     implementation 'com.google.android.gms:play-services-location:19.0.1'
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
 
     //custom library
-    implementation 'net.gotev:uploadservice:2.1'
+//    implementation 'net.gotev:uploadservice:2.1'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
 
-
-    implementation 'com.android.volley:volley:1.1.1'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
     implementation "com.leinardi.android:speed-dial:1.0-alpha06"
@@ -76,31 +95,36 @@ dependencies {
     implementation 'com.github.TutorialsAndroid:KAlertDialog:v4.1'
 
     //firebase library
-    implementation 'com.firebase:geofire-android:2.3.1'
-    implementation 'com.google.firebase:firebase-messaging:17.4.0'
-    implementation 'com.google.firebase:firebase-firestore:18.0.1'
-    implementation 'com.google.firebase:firebase-core:16.0.7'
-    implementation 'com.google.firebase:firebase-database:16.0.6'
-    implementation 'com.google.firebase:firebase-storage:16.0.5'
-    implementation 'com.google.firebase:firebase-auth:16.1.0'
+    implementation platform('com.google.firebase:firebase-bom:29.2.1')
 
     //retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
 
     implementation 'com.github.florent37:singledateandtimepicker:2.1.4'
     implementation 'com.wang.avi:library:2.1.3'
 
     //bubble seek bar
-    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+//    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
 
     //PhotoDraweeView
-    implementation 'me.relex:photodraweeview:1.1.3'
     implementation 'com.facebook.fresco:fresco:1.10.0'
+    implementation 'me.relex:photodraweeview:1.1.3'
 
     //date range time picker
     implementation 'com.borax12.materialdaterangepicker:library:2.0'
 
+    //stream chat
+    implementation "io.getstream:stream-chat-android-ui-components:4.13.0"
 
+    //mapbox
+//    implementation 'com.mapbox.maps:android:10.5.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:9.7.1'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-places-v9:0.12.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-markerview-v9:0.4.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-turf:6.2.0'
+    implementation ('com.mapbox.mapboxsdk:mapbox-android-sdk:9.7.1'){
+        exclude group: 'group_name', module: 'module_name'
+    }
 }

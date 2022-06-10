@@ -7,70 +7,116 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.net" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name=".User.Helper.App"
+        android:name=".Helper.App"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".User.UI.ProfileEditActivity"></activity>
-        <activity android:name=".User.UI.SearchUserActivity"></activity>
-        <activity android:name=".User.UI.SearchUserDatabaseActivity"></activity>
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
+        <activity
+            android:name=".UI.ActivityResult.BloodResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Event.EventEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UIPMI.EditRequestedEventPmiActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
-        <activity
-            android:name=".User.UI.Event.EventMapsActivity"
-            android:label="@string/title_activity_event_maps" />
-        <activity android:name=".User.UI.PhotoViewerActivity" />
-        <activity android:name=".User.UI.Event.EventRequestEditActivity" />
-        <activity android:name=".User.UI.Event.DetailEventRequestActivity" />
-        <activity android:name=".User.UI.Event.EventRequestUnapprovedActivity" />
-        <activity android:name=".User.UI.DonorJoinedDetailActivity" />
-        <activity android:name=".User.UI.Event.DetailDonorRequestActivity" />
-        <activity android:name=".User.UI.FindDonorActivity" />
-
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
-
+            android:value="AIzaSyBVDRfYYFQNlV0ap5AcNDTksEg2Vq6euOo" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- service -->
         <service
-            android:name=".User.Services.FirebaseServices"
+            android:name=".Services.UserLocationServices"
+            android:enabled="true"
+            android:exported="true">
+
+            <!-- Any inner elements would go here. -->
+        </service>
+        <service
+            android:name=".Services.DonorLocationServices"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.FirebaseServices"
+            android:exported="true"
             android:stopWithTask="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </service>
-
-        <activity android:name=".User.UI.MainActivity">
+        </service> <!-- activity -->
+        <activity
+            android:name=".UIPMI.PmiChooserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UIPMI.RequestedDetailEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UIPMI.RequestedEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UIPMI.MainPmiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.Chat.ChatRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.ActivityResult.UserChat"
+            android:exported="false"
+            android:noHistory="true" />
+        <activity
+            android:name=".UI.HelpRequest.RequestDonorDetail"
+            android:exported="false" />
+        <activity
+            android:name=".trymap"
+            android:exported="false" />
+        <activity
+            android:name=".UI.ActivityResult.PmiActivityResult"
+            android:exported="false" />
+        <activity
+            android:name=".MapBoxJavaActivity"
+            android:exported="true" />
+        <activity android:name=".UI.SearchUserDatabaseActivity" />
+        <activity android:name=".UI.PhotoViewerActivity" />
+        <activity android:name=".UI.Event.EventRequestEditActivity" />
+        <activity android:name=".UI.Event.EventRequestUnapprovedActivity" />
+        <activity android:name=".UI.HelpRequest.DonorJoinedDetailActivity" />
+        <activity android:name=".UI.Event.DetailDonorRequestActivity" />
+        <activity
+            android:name=".UI.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -78,47 +124,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".User.UI.LoginActivity"
+            android:name=".UI.LoginActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".User.UI.HomeActivity"
+            android:name=".UI.HomeActivity"
             android:label="@string/title_activity_home"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-        <activity android:name=".User.UI.Event.EventActivity" />
+        <activity android:name=".UI.Event.EventActivity" />
         <activity
-            android:name=".User.UI.HelpMapsActivity"
+            android:name=".UI.HelpRequest.RequestDonor"
             android:label="@string/title_activity_help_maps" />
+        <activity android:name=".UI.Event.EventDetailActivity" />
+        <activity android:name=".UI.Event.JoinedActivity" />
         <activity
-            android:name=".User.UI.MapsActivity"
-            android:label="@string/title_activity_help_maps" />
-        <activity android:name=".User.UI.ChatRoomActivity" />
-        <activity
-            android:name=".User.UI.CallUserActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_call_user"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".User.UI.Event.EventDetailActivity" />
-        <activity android:name=".User.UI.JoinedEventDonorActivity" />
-        <activity
-            android:name=".User.UI.RequestEventDonorActivity"
+            android:name=".UI.Event.RequestActivity"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme" />
-        <activity android:name=".User.UI.BloodBankActivity" />
-        <activity android:name=".User.UI.ReminderActivity" />
-        <activity android:name=".User.UI.ReminderEditActivity" />
-
-        <receiver android:name=".User.Helper.AlarmReceiver" />
-        <receiver android:name=".User.Helper.BootReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
+        <activity android:name=".UI.BloodBankActivity" />
     </application>
 
 </manifest>

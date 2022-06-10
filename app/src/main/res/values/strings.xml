@@ -4,11 +4,13 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
+    <!--Mapbox access token-->
+    <string name="mapbox_access_token">pk.eyJ1IjoiZGVuaXNwcmF3aXJhIiwiYSI6ImNrMWlzeHIwczAzcjQzbnFndmVvaHM0dzYifQ.xs5xA0nwMLZ4wbL9kcmwXw</string>
+    <string name="chat_stream_token">fmwk89kd2zen</string>
     <string name="account_balance">Account Balance</string>
     <string name="balance_currency">$</string>
     <string name="balance_amount">524.99</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -45,5 +47,18 @@
     <string name="form_repassword">Masukkan Ulang Password Anda…</string>
     <string name="form_nextbutton">Lanjutkan</string>
 
+    <string name="polygon_circle_transformation_circle_steps">Steps: </string>
+    <string name="polygon_circle_transformation_circle_radius">Radius: </string>
 
+    <string-array name="eventStatus">
+        <item>Approved</item>
+        <item>Pending</item>
+        <item>Disapprove</item>
+    </string-array>
+
+    <string-array name="helprequestStatus">
+        <item>Active</item>
+        <item>Pending</item>
+        <item>Finished</item>
+    </string-array>
 </resources>

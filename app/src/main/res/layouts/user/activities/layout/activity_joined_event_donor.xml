@@ -6,181 +6,75 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".User.UI.JoinedEventDonorActivity">
+    tools:context=".UI.Event.JoinedActivity">
 
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_width="410dp"
-        android:layout_height="264dp"
-        android:background="#F0EEEE"
-        android:elevation="0dp"
-        android:gravity="center"
-        app:elevation="0dp"
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageButton
+            android:id="@+id/backJoinedEvent"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_arrow_back_pink_24dp" />
+
+        <TextView
+            android:id="@+id/textView19"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/input_margin"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:text="Permintaan Acara Donor Darah"
+            android:textColor="@color/colorBlue1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginBottom="8dp"
-                android:orientation="vertical"
-                android:paddingStart="25dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.204">
-
-                <TextView
-                    android:id="@+id/eventJoinedLabelDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="03 March ,2019"
-                    android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/eventJoinedLabelDay"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="Friday"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16sp"
-                    android:textStyle="bold|italic" />
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="323dp"
-                android:layout_height="160dp"
-                android:layout_gravity="center|end"
-                android:layout_marginTop="76dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/illustration_man_event" />
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="16dp"
-                android:background="@android:color/transparent"
-                android:elevation="0dp"
-                android:gravity="end"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingEnd="20dp">
-
-                    <ImageButton
-                        android:id="@+id/backJoinedEvent"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="right|end"
-                        android:layout_margin="5dp"
-                        android:background="@drawable/theme_button_transparent"
-                        android:elevation="8dp"
-                        android:foregroundGravity="left"
-                        app:srcCompat="@drawable/ic_arrow_back_pink_24dp"
-                        tools:layout_editor_absoluteX="16dp"
-                        tools:layout_editor_absoluteY="20dp" />
-                </LinearLayout>
-
-
-            </androidx.appcompat.widget.Toolbar>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout12"
-        android:layout_width="0dp"
-        android:layout_height="25dp"
-        android:background="@drawable/background_header_bottom"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbar"></LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="-10dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
-
-        <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
-            android:id="@+id/floating_top_bar_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/rounded_rect_white"
-            android:elevation="0dp"
-            android:paddingStart="16dp"
-            android:paddingTop="5dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="16dp"
-            app:bnc_mode="spread">
-
-            <com.gauravk.bubblenavigation.BubbleToggleView
-                android:id="@+id/c_item_rest"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:bt_active="true"
-                app:bt_colorActive="@color/colorPrimary"
-                app:bt_colorInactive="@color/colorAccent"
-                app:bt_icon="@drawable/ic_event_icon"
-                app:bt_padding="12dp"
-                app:bt_shape="@drawable/transition_background_drawable_default"
-                app:bt_title="Event" />
-
-            <com.gauravk.bubblenavigation.BubbleToggleView
-                android:id="@+id/c_item_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:bt_colorActive="@color/colorPrimary"
-                app:bt_colorInactive="@color/colorAccent"
-                app:bt_icon="@drawable/ic_find_donor"
-                app:bt_padding="12dp"
-                app:bt_shape="@drawable/transition_background_drawable_default"
-                app:bt_title="Relawan" />
-
-
-        </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:elevation="5dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
     </LinearLayout>
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutJoinedEvent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorRed1"
+        app:tabInlineLabel="true">
 
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerJoined"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayoutJoinedEvent">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/joinedEventDonorRecyclerView"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

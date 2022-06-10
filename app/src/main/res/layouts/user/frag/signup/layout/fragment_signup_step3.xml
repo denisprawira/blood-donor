@@ -79,7 +79,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/imageViewSvgFemale"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center_vertical|center_horizontal|center"
@@ -87,7 +87,7 @@
                         app:srcCompat="@drawable/svg_male" />
 
                     <TextView
-                        android:id="@+id/textView29"
+                        android:id="@+id/imageViewSvgMale"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="3dp"

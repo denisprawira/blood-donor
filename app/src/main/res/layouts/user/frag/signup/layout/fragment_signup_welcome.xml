@@ -34,24 +34,33 @@
             android:text="ini adalah platform yang membantu dalam masalah pencarian donor darah dan event"
             android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/welcome_login"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/input_height"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/input_margin"
-            android:layout_marginBottom="@dimen/input_margin"
-            android:background="@drawable/theme_button_solid_radius"
-            android:padding="5dp"
-            android:text="Login"
-            android:textColor="@color/white" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/welcome_signup"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/input_height"
-            android:background="@drawable/theme_button_stroke_ripple"
-            android:text="Sign Up"
-            android:textColor="@color/colorRed1" />
+            <Button
+                android:id="@+id/welcome_login"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/theme_button_solid_radius"
+                android:padding="5dp"
+                android:text="Login"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/welcome_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/input_height"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/theme_button_stroke_ripple"
+                android:text="Sign Up"
+                android:textColor="@color/colorRed1" />
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User.UI.HomeActivity">
+    tools:context=".UI.HomeActivity">
 
     <include
         android:id="@+id/include"
@@ -29,8 +29,9 @@
         android:id="@+id/bottom_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:itemIconSize="27dp"
-        app:labelVisibilityMode="unlabeled"
+        app:labelVisibilityMode="labeled"
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="bottom|center"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -19,4 +19,11 @@
         <item>@drawable/ic_logout_grey600_24dp</item>
     </array>
 
+    <array name="polygon_circle_transformation_circle_distance_units_array">
+        <item>Kilometers</item>
+        <item>Miles</item>
+        <item>Degrees</item>
+        <item>Radians</item>
+    </array>
+
 </resources>
